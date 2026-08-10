@@ -26,10 +26,6 @@ const App = () => {
     }
   };
 
-
-  
-
-
   return (
     <div>
       <h1>Adding and Removing values</h1>
