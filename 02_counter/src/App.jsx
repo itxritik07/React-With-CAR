@@ -6,7 +6,18 @@ const App = () => {
 
   const addValue = () => {
     if (counter < 20) {
-      setCounter(counter + 1)
+      // Interview Qna:
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1) // still same
+
+      // actually function - 
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1) // now it changes
     }
   };
   const decValue = () => {
@@ -14,6 +25,9 @@ const App = () => {
       setCounter(counter - 1)
     }
   };
+
+
+  
 
 
   return (
