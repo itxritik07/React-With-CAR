@@ -1,7 +1,7 @@
 // https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json - updated API currency.
 import { useEffect, useState } from "react";
 
-
+// custom hooks
 function useCurrencyInfo(currency) {
     const [data, setData] = useState({});
 
@@ -11,7 +11,7 @@ function useCurrencyInfo(currency) {
             .then((res) => setData(res[currency]))
         // console.log("Data: ", data)
     }, [currency]);
-    return data
+    return data;
 };
 
-export default useCurrencyInfo
+export default useCurrencyInfo;

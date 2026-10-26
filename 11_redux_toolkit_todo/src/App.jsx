@@ -1,7 +1,6 @@
-import React from 'react'
-import './App.css'
-import AddTodo from './components/AddTodo'
-import Todos from './components/Todos'
+import './App.css';
+import AddTodo from './components/AddTodo';
+import Todos from './components/Todos';
 
 const App = () => {
   return (
@@ -10,6 +9,6 @@ const App = () => {
       <Todos/>
     </>
   )
-}
+};
 
-export default App
+export default App;

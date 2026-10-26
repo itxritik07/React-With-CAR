@@ -1,26 +1,44 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { removeTodo } from '../features/todo/todoSlice'
-import { updateTodo } from '../features/todo/todoSlice'
-
+import { useSelector, useDispatch } from 'react-redux';
+import { removeTodo } from '../features/todo/todoSlice';
+import { updateTodo } from '../features/todo/todoSlice';
+import { useState } from 'react';
 
 const Todos = () => {
-    const todos = useSelector(state => state.todos)
-    const dispatch = useDispatch()
-    
+    const todos = useSelector(state => state.todos);
+    const dispatch = useDispatch();
+
+    const [editingId, setEditingId] = useState(null);
+    const [editText, setEditText] = useState('');
+
+    const handleUpdate = (todo) => {
+        editingId === todo.id
+            ? (editText.trim() &&
+                dispatch(updateTodo({
+                    id: todo.id,
+                    text: editText.trim()
+                })),
+                setEditingId(null),
+                setEditText(''))
+            : (setEditingId(todo.id),
+                setEditText(todo.text));
+    };
+
     return (
         <>
             <div className='font-bold text-3xl text-center'>Todos:</div>
+
             <ul className="list-none">
                 {todos.map((todo) => (
                     <li
                         className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded w-[50vw] mx-auto"
                         key={todo.id}
                     >
+                        {/* todo.text comes from initial state we declared */}
                         <div className='text-white'>{todo.text}</div>
+
                         <button
                             className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
-                            onClick={()=> dispatch(removeTodo(todo.id))}
+                            onClick={() => dispatch(removeTodo(todo.id))}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -37,11 +55,20 @@ const Todos = () => {
                                 />
                             </svg>
                         </button>
+
+                        <button
+                            className="text-white bg-blue-500 border-0 py-1 px-4 focus:outline-none hover:bg-blue-600 rounded text-md"
+                            onClick={() => handleUpdate(todo)}
+                        >
+                            {editingId === todo.id ? 'Save' : 'Edit'}
+                        </button>
+
+
                     </li>
                 ))}
             </ul>
         </>
     )
-}
+};
 
-export default Todos
+export default Todos;

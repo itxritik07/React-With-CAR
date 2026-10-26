@@ -103,7 +103,6 @@ export class Service {
     };
 
 
-
     // File upload services: upload and delete
     async uploadFile(file) {
         try {
@@ -135,7 +134,7 @@ export class Service {
     getFilePreview(fileId) {
         return this.bucket.getFilePreview({
             bucketId: config.appwriteBucketId,
-            fileId: ID.unique()
+            fileId: fileId
         })
     };
 }

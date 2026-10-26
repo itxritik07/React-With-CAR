@@ -13,6 +13,7 @@ export class AuthService {
     };
 
     // use on higher level production level applications
+    // SignIn
     async createAccount({ email, password, name }) {
         try {
             const userAccount = await this.account.create({
@@ -34,7 +35,7 @@ export class AuthService {
             throw error;
         }
     };
-
+    
     async login({ email, password }) {
         try {
             return await this.account.createEmailPasswordSession({
@@ -69,4 +70,4 @@ export class AuthService {
 
 const authService = new AuthService();
 
-export default AuthService
+export default authService

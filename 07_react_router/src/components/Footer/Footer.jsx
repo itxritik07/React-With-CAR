@@ -17,6 +17,7 @@ const Footer = () => {
                                 />
                             </Link>
                         </div>
+
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
                                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
@@ -33,6 +34,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
+
                             <div>
                                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                                 <ul className="text-gray-500 font-medium">
@@ -53,6 +55,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
+
                             <div>
                                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                                 <ul className="text-gray-500 font-medium">
@@ -68,9 +71,12 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
+
                     <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+                    
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <span className="text-sm text-gray-500 sm:text-center">
                             © 2023

@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 
-/* new approach */
+/* new approach for theme chaanging */
 @custom-variant dark (&:where(.dark, .dark *)); 

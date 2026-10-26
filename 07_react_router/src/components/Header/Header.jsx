@@ -29,6 +29,7 @@ const Header = () => {
                                 Get started
                             </Link>
                         </div>
+                        
                         <div
                             className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
                             id="mobile-menu-2"
@@ -83,4 +84,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;

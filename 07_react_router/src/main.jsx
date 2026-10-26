@@ -31,6 +31,7 @@ import Github from './components/Github/Github.jsx'
 //   }
 // ])
 
+
 // New syntax:
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,10 +43,10 @@ const router = createBrowserRouter(
       <Route path='/github' element={<Github />} /> 
     </Route>
   )
-)
+);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <StrictMode>  
     <RouterProvider router={router} />
   </StrictMode>,
-)
+);

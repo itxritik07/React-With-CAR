@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 
-const Appp = () => {
+const App = () => {
     const [length, setLength] = useState(8);
     const [numAllowed, setNumAllowed] = useState(false);
     const [charAllowed, setCharAllowed] = useState(false);
     const [password, setPassword] = useState("");
-
 
     const passRef = useRef(null);
 
@@ -14,24 +13,24 @@ const Appp = () => {
         let pass = "";
         let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-        if (numAllowed) str += "0123456789"
-        if (charAllowed) str += "!@#$%^&*()_+-=[]{}|;:,.<>?"
+        if (numAllowed) str += "0123456789";
+        if (charAllowed) str += "!@#$%^&*()_+-=[]{}|;:,.<>?";
 
         for (let i = 1; i <= length; i++) {
             let char = Math.floor(Math.random() * str.length + 1);
-            pass += str.charAt(char)
+            pass += str.charAt(char);
         };
         setPassword(pass);
     }, [length, numAllowed, charAllowed, setPassword]);
 
     const copyPassToClipBoard = useCallback(() => {
-        passRef.current?.select()
+        passRef.current?.select();
         passRef.current?.setSelectionRange(0, 50)
         window.navigator.clipboard.writeText(password)
     }, [password]);
 
     useEffect(() => {
-        passwordGenerator()
+        passwordGenerator();
     }, [length, numAllowed, charAllowed, passwordGenerator]);
 
 
@@ -39,6 +38,7 @@ const Appp = () => {
         <>
             <div className='text-center px-4 py-5 my-8 rounded-lg w-full max-w-200 mx-auto  bg-[#612D53] shadow-xl/20'>
                 <h1 className='text-[#F3F4F4] text-4xl font-bold mb-3'>Password Generator</h1>
+
                 <div className='flex items-center rounded-lg overflow-hidden mb-4 '>
                     <input
                         className='outline-none bg-white py-1 px-3 w-full text-[#612D53]'
@@ -94,7 +94,7 @@ const Appp = () => {
 
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Appp
+export default App;

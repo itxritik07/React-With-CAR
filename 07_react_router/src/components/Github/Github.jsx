@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 const Github = () => {
-    const [data, setData] = useState    ([])
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         fetch('https://api.github.com/users/hiteshchoudhary')
@@ -17,6 +17,6 @@ const Github = () => {
             <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>Github followers: {data.followers}</div>
         </>
     )
-}
+};
 
-export default Github
+export default Github;

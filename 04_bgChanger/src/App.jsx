@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+
 
 const App = () => {
-  const [color, setColor] = useState("white") // Default color  
+  const [color, setColor] = useState("white"); // Default color  
 
   return (
     <>
@@ -19,7 +20,7 @@ const App = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

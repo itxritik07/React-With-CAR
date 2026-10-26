@@ -2,10 +2,10 @@ import React from 'react'
 import useTheme from '../Context/Theme'
 
 const ThemeButton = () => {
-    const { themeMode, lightTheme, darkTheme } = useTheme()
+    const { themeMode, darkTheme, lightTheme } = useTheme();
 
     const onChangeButton = (e) => {
-        const darkModeStatus = e.currentTarget.checked
+        const darkModeStatus = e.currentTarget.checked;
         if (darkModeStatus) {
             darkTheme()
         }
@@ -32,4 +32,4 @@ const ThemeButton = () => {
     )
 }
 
-export default ThemeButton
+export default ThemeButton;

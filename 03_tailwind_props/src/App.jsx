@@ -10,8 +10,7 @@ const App = () => {
   // };
 
   // Can we pass Array ? ✅
-  // let myArr = [1, 2, 3, 4, 5]
-
+  // let myArr = [1, 2, 3, 4, 5];
 
   return (
     <>
@@ -20,8 +19,7 @@ const App = () => {
       {/* <Card channel="welcome to my channel" obj={myObj} array={myArr}/> */}
       <Card username="Rohan" role="Developer" />
     </>
-  )
-}
+  );
+};
 
-export default App
-
+export default App;

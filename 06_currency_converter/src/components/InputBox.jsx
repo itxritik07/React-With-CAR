@@ -1,6 +1,5 @@
 import React, { useId } from 'react'
 
-
 function InputBox({
   label,
   amount,
@@ -57,7 +56,7 @@ function InputBox({
       </div>
     </div>
   );
-}
+};
 
 export default InputBox;
 

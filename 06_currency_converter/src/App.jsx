@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
-import InputBox from './components/InputBox'
-import useCurrencyInfo from './hooks/useCurrencyInfo'
+import InputBox from './components/InputBox';
+import useCurrencyInfo from './hooks/useCurrencyInfo';
 
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                convert()
+                convert();
               }}
             >
               <div className="w-full mb-1">
@@ -83,7 +83,7 @@ const App = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-// handling props
-const Card = ({username, role}) => {
-    // console.log(username);
-    
+const Card = ({ username, role }) => {
+    console.log("username:", username);
+    console.log("role:", role);
+
     return (
         <>
             <div className="w-60 flex flex-col rounded-xl bg-black min-h-76 mx-auto mt-3 ">
@@ -19,11 +19,10 @@ const Card = ({username, role}) => {
                         <h1 className="font-bold text-white">{username}</h1>
                         <h1 className='text-white'>{role}</h1>
                     </div>
-                    
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;
